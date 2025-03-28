@@ -1,0 +1,22 @@
+4. Identificar las clases que heredan, ¿qué atributos y métodos heredan?
+La clase que hereda es Triangulo, puesto que la clase FiguraGeometrica es abstracta. Entonces triangulo hereda el atributo de nombre y algunos metodos como los getters y los setters del nombre de FiguraGeometrica, además de calcularAreaFigura() y esRegular() son implementados por Triangulo más declarados en la clase padre osea FiguraGeometrica.
+
+5. Identificar las clases que conforman una composición.
+Aunque en el diagrama de clases nos muestren que Triangulo y FiguraGeometrica tengan una relación fuerte de composición, uno puede existir sin la otra por lo que no se estarían respetando las definiciones de composición. Las que si mantienen una dependencia fuerte que caractriza la composición son SuperficiePlana y FiguraGeometrica pues SuperficiePlana es la contenedora de FiguraGeometrica, por lo que no puede existir FiguraGeometrica si no esta alojada en una superficie plana.
+
+6. ¿Qué es una superclase y una subclase?
+La SuperClase es una clase que se encuentra en una jerarquia superior, es la que define que  atributos y metodos serán compartidos por sus subclases.
+La SubClase es la clase que hereda los atributos y metodos de la superclase, que puede modificar o implementar nuevas funcionalidades a lo heredado mediante sobrecarga.
+
+7. ¿Por qué usamos abstract? ¿Se puede dejar de heredar un método de una clase abstracta?
+Se utiliza abscract para declarar un metodo en una clase, que será heredada por sus subclases deben proporcionar su propia implementación, obligatoriamente.
+No, no se puede dejar de heredar un método de una clase abstracta, la subclase esta obligada a implementar los metodos abstractos, aunque puedes evitar implementarlos, si la clase es de vuelta declarada como abstracta.
+
+8. ¿Qué anotación utilizo para sobreescribir métodos?
+  @Override, esta anotación indica que se esta sobreescribiendo la logica de un metodo, generalmente de la superclase o de una interfaz.
+
+9. Los atributos de la clase Figura Geométrica conviértalas en protected. ¿En qué condición 
+convierte a los atributos? ¿Es posible acceder a los atributos protegidos sin utilizar una invocación a super() o sin método get?.
+Si cambiaramos los atributos de la clase FiguraGeometrica a protected, podrían ser accedidas directamente por las clases hija directamente, sin necesidad de utilizar los metodos que hemos especificado para retornar la información, entonces no habría encapsulamiento en la clase.
+Sí, es posible acceder a los atributos protegidos, siempre y cuando el que accede es una clase hija.
+  
